@@ -32,7 +32,7 @@ button {
   border: 1px solid black;
   border-radius: 10px;
   position: fixed;
-  top: 50%;
+  top: 0%;
   left: 50%;
   transform-origin: center;
   transform: translate(-50%, -50%);
@@ -55,9 +55,20 @@ button {
 .popup-modal.show {
   opacity: 100%;
   pointer-events: all;
+  animation-duration: 2s;
+  animation-name: drop-down;
+  animation-fill-mode: forwards;
 }
 
 .backdrop.show {
   opacity: 30%;
 }
 
+@keyframes drop-down {
+  from {
+    top: 0%;
+  }
+  to {
+    top: 50%;
+  }
+}
