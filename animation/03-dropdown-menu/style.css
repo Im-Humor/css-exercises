@@ -17,8 +17,13 @@
   padding: 0;
   margin: 0;
   background-color: rgb(99, 97, 97);
-
   display: none;
+
+  transform: scaleY(0); 
+  animation-duration: 1s;
+  animation-name: drop-bounce;
+  animation-fill-mode: forwards;
+  transform-origin: top left;
 }
 
 ul.dropdown-menu li:hover {
@@ -29,4 +34,14 @@ ul.dropdown-menu li:hover {
   display: block;
 }
 
-
+@keyframes drop-bounce {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
